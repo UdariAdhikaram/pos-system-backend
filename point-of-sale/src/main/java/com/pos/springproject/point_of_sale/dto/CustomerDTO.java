@@ -1,7 +1,6 @@
 package com.pos.springproject.point_of_sale.dto;
 
 import org.hibernate.annotations.Type;
-
 import javax.persistence.Column;
 import java.util.ArrayList;
 
