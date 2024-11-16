@@ -5,10 +5,7 @@ import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.ArrayList;
 
 @Entity
@@ -21,6 +18,7 @@ public class Customer {
 
     @Id
     @Column(name = "customer_id", length = 50)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int customerId;
 
     @Column(name = "customer_name", length = 100, nullable = false)
@@ -123,4 +121,15 @@ public class Customer {
                 ", activeState=" + activeState +
                 '}';
     }
+
+    public Customer(String customerName, String customerAddress, double customerSalary, ArrayList contactNumbers, String nic, boolean activeState) {
+        this.customerName = customerName;
+        this.customerAddress = customerAddress;
+        this.customerSalary = customerSalary;
+        this.contactNumbers = contactNumbers;
+        this.nic = nic;
+        this.activeState = activeState;
+    }
+
+
 }
