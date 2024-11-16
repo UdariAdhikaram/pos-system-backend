@@ -4,7 +4,7 @@ import com.pos.springproject.point_of_sale.dto.CustomerDTO;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/v1/customer")
+@RequestMapping("api/v1/test")
 @CrossOrigin
 public class TestController {
 
